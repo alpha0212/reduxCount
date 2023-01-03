@@ -1,15 +1,14 @@
 import React from "react";
 import { Route, Routes } from "react-router";
-import { CountTodo } from "./components";
+import { MainPage, GlobalValue } from "./pages";
 
-function App() {
+export const App = () => {
   return (
     <>
       <Routes>
-        <Route index element={<CountTodo />} />
+        <Route index element={<MainPage />} />
+        <Route path="/global" element={<GlobalValue />} />
       </Routes>
     </>
   );
-}
-
-export default App;
+};
